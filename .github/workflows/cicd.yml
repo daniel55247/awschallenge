@@ -18,12 +18,17 @@ jobs:
     - name: checkout
       uses: actions/checkout@v4
 
+    - name: review directory
+      run: |
+        pwd
+        ls -la
+
     - name: nodejs config
       uses: actions/setup-node@v4
       with:
-        node-version: 15.14.0
+        node-version: 15
         cache: 'npm'
-        cache-dapendency-path: codebase\rdicidr-0.1.0\package-lock.json
+        cache-dapendency-path: codebase/rdicidr-0.1.0/package-lock.json
 
     - name: install
       working-directory: codebase\rdicidr-0.1.0
