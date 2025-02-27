@@ -5,7 +5,7 @@ metadata:
   namespace: production
 spec:
   selector:
-    app.kubernetes.io/name: awschallengeapp
+    app: awschallengeapp
   type: ClusterIP
   ports:
     - protocol: TCP

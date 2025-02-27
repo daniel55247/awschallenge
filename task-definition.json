@@ -1,0 +1,23 @@
+{
+    "containerDefinitions": [
+        {
+        
+            "essential": true,
+            "image": "ghcr.io/daniel55247/awschallenge/awschallengeimage:latest",
+            "name": "app-container",
+            "portMappings": [
+                {
+                    "hostPort": 8080,
+                    "containerPort": 8080,
+                    "protocol": "tcp"
+                }
+            ]
+        }
+    ],
+    "memory": "256",
+    "cpu": "512",
+    "networkMode": "awsvpc",
+    "family": "fargate-task-definition",
+    "executionRoleArn": "arn:aws:iam::774305593614:role/ecsTaskExecutionRole",
+    "requiresCompatibilities": ["FARGATE"]
+}
