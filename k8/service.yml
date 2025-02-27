@@ -5,9 +5,9 @@ metadata:
   namespace: production
 spec:
   selector:
-    app.kubernetes.io/name: awschallengeapp
+    app: awschallengeapp
   type: ClusterIP
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: 8080
+      targetPort: 80
