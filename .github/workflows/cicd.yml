@@ -46,7 +46,7 @@ jobs:
       working-directory: codebase/rdicidr-0.1.0
       run: CI=true npm run test
 
-    - name: test
+    - name: build
       working-directory: codebase/rdicidr-0.1.0
       run: npm run build
 
@@ -69,7 +69,7 @@ jobs:
 
 
 
-        
+
 
     
 
