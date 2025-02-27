@@ -31,23 +31,23 @@ jobs:
         cache-dependency-path: codebase/rdicidr-0.1.0/package-lock.json
 
     - name: install
-      working-directory: codebase\rdicidr-0.1.0
+      working-directory: codebase/rdicidr-0.1.0
       run: npm install 
 
     - name: lint
-      working-directory: codebase\rdicidr-0.1.0
+      working-directory: codebase/rdicidr-0.1.0
       run: npm run lint
       
     - name: prettier
-      working-directory: codebase\rdicidr-0.1.0
+      working-directory: codebase/rdicidr-0.1.0
       run: npm run prettier || true 
       
     - name: test
-      working-directory: codebase\rdicidr-0.1.0
+      working-directory: codebase/rdicidr-0.1.0
       run: CI=true npm run test
 
     - name: test
-      working-directory: codebase\rdicidr-0.1.0
+      working-directory: codebase/rdicidr-0.1.0
       run: npm run build
 
   buildimage:
@@ -61,11 +61,15 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Build the Docker image
-      working-directory: codebase\rdicidr-0.1.0
+      working-directory: codebase/rdicidr-0.1.0
       run: |
         echo "${{secrets.GHCR_TOKEN}}" | docker login ghcr.io -u daniel55247 --password-stdin
         docker build -t ghcr.io/daniel55247/awschallenge/awschallengeimage:latest . 
         docker push ghcr.io/daniel55247/awschallenge/awschallengeimage:latest
+
+
+
+        
 
     
 
