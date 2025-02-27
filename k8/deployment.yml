@@ -7,11 +7,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: awschallengeimageapp
+      app: awschallengeapp
   template:
     metadata:
       labels:
-        app: awschallengeimageapp
+        app: awschallengeapp
     spec:
       containers:
       - name: awschallengecontainter
