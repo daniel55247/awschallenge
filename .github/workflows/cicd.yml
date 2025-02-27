@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: 15
         cache: 'npm'
-        cache-dapendency-path: codebase/rdicidr-0.1.0/package-lock.json
+        cache-dapendency-path: codebase\rdicidr-0.1.0\package-lock.json
 
     - name: install
       working-directory: codebase\rdicidr-0.1.0
@@ -48,6 +48,7 @@ jobs:
   buildimage:
 
     runs-on: ubuntu-latest
+    needs: [build]
 
     steps:
 
